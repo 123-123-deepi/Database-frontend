@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods Example</title>
+</head>
+<body>
+  <h1>Array Methods Example</h1>
+  <input id="input" type="text" placeholder="Enter a fruit">
+  <button onclick="addFruit()">Add Fruit</button>
+  <button onclick="displayFruits()">Display Fruits</button>
+  <p id="result"></p>
+
+  <script>
+    let fruits = ["Apple", "Banana", "Cherry"];
+
+    function addFruit() {
+      let fruit = document.getElementById("input").value;
+      fruits.push(fruit);
+      document.getElementById("input").value = "";
+    }
+
+    function displayFruits() {
+      let result = "";
+
+      // forEach()
+      result += "Fruits: ";
+      fruits.forEach(fruit => {
+        result += fruit + ", ";
+      });
+      result = result.slice(0, -2) + "<br>";
+
+      // map()
+      let upperCaseFruits = fruits.map(fruit => fruit.toUpperCase());
+      result += "Upper Case Fruits: " + upperCaseFruits.join(", ") + "<br>";
+
+      // filter()
+      let fruitsStartingWithA = fruits.filter(fruit => fruit.startsWith("A"));
+      result += "Fruits Starting with A: " + fruitsStartingWithA.join(", ") + "<br>";
+
+      // reduce()
+      let totalLength = fruits.reduce((total, fruit) => total + fruit.length, 0);
+      result += "Total Length of Fruits: " + totalLength + "<br>";
+
+      // find()
+      let foundFruit = fruits.find(fruit => fruit === "Banana");
+      result += "Found Fruit: " + foundFruit + "<br>";
+
+      // indexOf()
+      let index = fruits.indexOf("Cherry");
+      result += "Index of Cherry: " + index + "<br>";
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Data Type Example</title>
+</head>
+<body>
+  <h1>Number Data Type Example</h1>
+  <input id="num1" type="number" placeholder="Enter first number">
+  <input id="num2" type="number" placeholder="Enter second number">
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+      let result = "";
+
+      // Arithmetic operations
+      result += "Sum: " + (num1 + num2) + "<br>";
+      result += "Difference: " + (num1 - num2) + "<br>";
+      result += "Product: " + (num1 * num2) + "<br>";
+      result += "Quotient: " + (num1 / num2) + "<br>";
+
+      // Comparison operations
+      result += "Is Equal: " + (num1 === num2) + "<br>";
+      result += "Is Greater: " + (num1 > num2) + "<br>";
+      result += "Is Less: " + (num1 < num2) + "<br>";
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

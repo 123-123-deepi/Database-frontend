@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Data Type Example</title>
+</head>
+<body>
+  <h1> Data Type Example</h1>
+  <input id="input" type="text" placeholder="Enter a string"><br>
+  <button onclick="processString()">Process string</button>
+  <p id="result"></p>
+
+  <script>
+    function processString() {
+      let input = document.getElementById("input").value;
+      let result = "";
+
+      // String methods
+      result += "Length: " + input.length + "<br>";
+      result += "Upper Case: " + input}

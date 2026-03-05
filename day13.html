@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boolean Data Type Example</title>
+</head>
+<body>
+  <h1>Boolean Data Type Example</h1>
+  <input id="age" type="number" placeholder="Enter your age">
+  <button onclick="checkAge()">Check Age</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAge() {
+      let age = Number(document.getElementById("age").value);
+      let isAdult = age >= 18;
+      let result = "";
+
+      if (isAdult) {
+        result = "You are an adult.";
+      } else {
+        result = "You are not an adult.";
+      }
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

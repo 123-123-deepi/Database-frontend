@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Operators</title>
+</head>
+<body>
+  <h1>JavaScript Operators</h1>
+  <input id="num1" type="number" placeholder="Enter first number">
+  <input id="num2" type="number" placeholder="Enter second number">
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+      let result = "";
+
+      // Arithmetic operators
+      result += "Addition: " + (num1 + num2) + "<br>";
+      result += "Subtraction: " + (num1 - num2) + "<br>";
+      result += "Multiplication: " + (num1 * num2) + "<br>";
+      result += "Division: " + (num1 / num2) + "<br>";
+      result += "Modulus: " + (num1 % num2) + "<br>";
+
+      // Comparison operators
+      result += "Equal: " + (num1 == num2) + "<br>";
+      result += "Not Equal: " + (num1 != num2) + "<br>";
+      result += "Greater Than: " + (num1 > num2) + "<br>";
+      result += "Less Than: " + (num1 < num2) + "<br>";
+
+      // Logical operators
+      result += "And: " + (num1 > 0 && num2 > 0) + "<br>";
+      result += "Or: " + (num1 > 0 || num2 > 0) + "<br>";
+      result += "Not: " + !(num1 > 0) + "<br>";
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

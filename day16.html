@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RR solutions</title>
+</head>
+<body>
+  <h1>RR solutions</h1>
+  <input id="name" type="text" placeholder="Enter your name">
+  <button onclick="greet()">Greet</button>
+  <p id="greeting"></p>
+
+  <script>
+    function greet() {
+      var name = document.getElementById("name").value;
+      var greeting = "Hello, " + name + "!";
+      document.getElementById("greeting").innerHTML = greeting;
+    }
+  </script>
+</body>
+</html>
